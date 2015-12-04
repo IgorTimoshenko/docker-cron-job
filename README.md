@@ -23,8 +23,8 @@ This repository contains **Dockerfile** of cron-job for [Docker](https://www.doc
 Start container specifying the executable script for cron:
 
     docker run -d \
-    -v `<script-dir>`/cron.sh:/root/cron.sh \
-    -e CRON_JOB='* * * * * ~/cron.sh' \
+    -v `<script-dir>`/script.sh:/root/script.sh \
+    -e CRON_JOB='* * * * * ~/script.sh' \
     igortimoshenko/docker-cron-job
 
 > Note that if you need environment variables within your cron script then add
